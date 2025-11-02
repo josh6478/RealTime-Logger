@@ -27,7 +27,7 @@ A lightweight, high-throughput remote logging system for embedded panels that su
 
 ## Overview
 
-**WeR Logger** enables remote debug and telemetry prints (DIM = Debug Information Message) from the panel to a remote server. It supports on-device buffering (Pull) and live streaming (Push), selective verbosity by module and level, and simultaneous mirroring to UART.
+**RT Logger** enables remote debug and telemetry prints (DIM = Debug Information Message) from the panel to a remote server. It supports on-device buffering (Pull) and live streaming (Push), selective verbosity by module and level, and simultaneous mirroring to UART.
 
 Typical use cases:
 - Field diagnostics with minimal server load (Pull).
