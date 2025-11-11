@@ -1,7 +1,7 @@
 
 # Realtime Logger
 
-A lightweight, high-throughput remote logging system for embedded panels that supports **Push** and **Pull** modes, double-buffered, low-latency transmission, and multiple backends (Socket/FTP/UART). Designed to coexist with real-time workloads such as live video streaming without impacting performance.
+A lightweight, high-throughput remote logging system for embedded panels that supports **Push** and **Pull** modes, double-buffered, low-latency transmission, and multiple backends (TCP and UDP Socket/FTP). Designed to coexist with real-time workloads such as live video streaming without impacting performance. This logger was tested on Arm M3 family cortex.
 
 > This README is a developer-facing summary and integration guide extracted from the system design. It focuses on how to use, integrate, and test the logger module.
 
