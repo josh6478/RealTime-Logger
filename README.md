@@ -1,7 +1,7 @@
 
 # Realtime Logger
 
-A lightweight, high-throughput remote logging system for embedded panels that supports **Push** and **Pull** modes, double-buffered, low-latency transmission, and multiple backends (TCP and UDP Socket/FTP). Designed to coexist with real-time workloads such as live video streaming without impacting performance. This logger was tested on Arm M3 family cortex.
+A lightweight, high-throughput remote logging system for embedded IoT devices that supports **Push** and **Pull** modes, double-buffered, low-latency transmission, and multiple backends (TCP and UDP Socket/FTP). Designed to coexist with real-time workloads such as live video streaming without impacting performance. This logger was tested on Arm M3 family cortex.
 
 > This README is a developer-facing summary and integration guide extracted from the system design. It focuses on how to use, integrate, and test the logger module.
 
@@ -56,11 +56,11 @@ Typical use cases:
 ### Pull Mode
 - DIMs are stored in **FLASH** (wrap-around segment; default ≥ 128 KB).
 - Trigger FTP **PUT** of a Debug Information File (DIF) via command or when segment reaches a threshold.
-- DIF file name includes **panel serial**, **date**, **time**.
+- DIF file name includes **device serial**, **date**, **time**.
 
 ### Push Mode
 - After reboot, open UDP/TCP socket and **stream DIMs live**.
-- First DIM includes **panel ID**, **serial**, **date**, **time**.
+- First DIM includes **device ID**, **serial**, **date**, **time**.
 - No retransmissions; UDP includes a **sequence number** in header.
 
 > In both modes, messages can **also** mirror to **UART**.
